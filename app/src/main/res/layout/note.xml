@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wukong"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="283dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.06"
+        android:gravity="center_horizontal"
+        android:text="说明"
+        android:textColor="@color/black"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="238dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.98"
+        android:gravity="left"
+        android:textColor="#000000"
+        android:text="1.点击开始游戏后进入游戏界面\n2.在游戏界面上任意位置上下左右滑动即可改变蛇的移动方向\n3.测试语句"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="制作人：CPH"
+        android:textSize="12dp" />
+
+</LinearLayout>

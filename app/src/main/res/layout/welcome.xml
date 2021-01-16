@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/wukong"
+    android:id="@+id/welocomeLayout">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:src="@drawable/snakelogo" />
+
+    <ImageButton
+        android:id="@+id/notesbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/exitbutton"
+        android:layout_below="@+id/exitbutton"
+        android:layout_marginTop="36dp"
+        android:background="@color/wukong"
+        android:src="@drawable/notesbutton" />
+
+    <ImageButton
+        android:id="@+id/startbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="86dp"
+        android:background="@color/wukong"
+        android:src="@drawable/startgamebutton" />
+
+    <ImageButton
+        android:id="@+id/exitbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/startbutton"
+        android:layout_below="@+id/startbutton"
+        android:layout_marginTop="38dp"
+        android:background="@color/wukong"
+        android:src="@drawable/exitbutton" />
+
+</RelativeLayout>
