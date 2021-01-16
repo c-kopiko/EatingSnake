@@ -109,7 +109,31 @@ public class GameActivity extends Activity implements android.view.GestureDetect
     // 滑屏监测
     @Override
     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-        Log.d("CPH", "onFling");
+        Log.d("EattingSnake", "onFling");
+
+        float minMove = 50; // 最小滑动距离
+        float minVelocity = 0; // 最小滑动速度
+        float beginX = e1.getX();
+        float endX = e2.getX();
+        float beginY = e1.getY();
+        float endY = e2.getY();
+        if (beginX - endX > minMove && Math.abs(velocityX) > minVelocity && Math.abs(beginX - endX) > Math.abs(beginY - endY)) { // 左滑
+            if (snake.head.dir != Dir.R) {
+                snake.head.dir = Dir.L;
+            }
+        } else if (endX - beginX > minMove && Math.abs(velocityX) > minVelocity && Math.abs(beginX - endX) > Math.abs(beginY - endY)) { // 右滑
+            if (snake.head.dir != Dir.L) {
+                snake.head.dir = Dir.R;
+            }
+        } else if (beginY - endY > minMove && Math.abs(velocityY) > minVelocity && Math.abs(beginX - endX) < Math.abs(beginY - endY)) { // 上滑
+            if (snake.head.dir != Dir.D) {
+                snake.head.dir = Dir.U;
+            }
+        } else if (endY - beginY > minMove && Math.abs(velocityY) > minVelocity && Math.abs(beginX - endX) < Math.abs(beginY - endY)) { // 下滑
+            if (snake.head.dir != Dir.U) {
+                snake.head.dir = Dir.D;
+            }
+        }
         return false;
     }
 
